@@ -42,8 +42,8 @@ importers:
         specifier: ^13.7.0
         version: 13.8.0(react@19.0.0-rc-45804af1-20241021)
       '@opencard/sdk':
-        specifier: file:../opencard-sdk
-        version: file:../opencard-sdk(@ai-sdk/openai@2.0.71(zod@3.25.76))(react-dom@19.0.0-rc-45804af1-20241021(react@19.0.0-rc-45804af1-20241021))(react@19.0.0-rc-45804af1-20241021)(ws@8.18.1(bufferutil@4.0.9))(zod@3.25.76)
+        specifier: ^0.0.4
+        version: 0.0.4(@ai-sdk/openai@2.0.71(zod@3.25.76))(react-dom@19.0.0-rc-45804af1-20241021(react@19.0.0-rc-45804af1-20241021))(react@19.0.0-rc-45804af1-20241021)(ws@8.18.1(bufferutil@4.0.9))(zod@3.25.76)
       '@opentelemetry/api':
         specifier: ^1.9.0
         version: 1.9.0
@@ -1144,8 +1144,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@opencard/sdk@file:../opencard-sdk':
-    resolution: {directory: ../opencard-sdk, type: directory}
+  '@opencard/sdk@0.0.4':
+    resolution: {integrity: sha512-sngK29CIH336KgzE0/hw93R7bXlM29fYOVc6RoCdjk7bGfFPeC5nA1mG7q71OWA9fDv8OIJ19OC15gKSUdqVaw==}
     peerDependencies:
       '@ai-sdk/openai': '*'
       react: '>=16.8.0'
@@ -5233,7 +5233,7 @@ snapshots:
   '@next/swc-win32-x64-msvc@15.3.0-canary.31':
     optional: true
 
-  '@opencard/sdk@file:../opencard-sdk(@ai-sdk/openai@2.0.71(zod@3.25.76))(react-dom@19.0.0-rc-45804af1-20241021(react@19.0.0-rc-45804af1-20241021))(react@19.0.0-rc-45804af1-20241021)(ws@8.18.1(bufferutil@4.0.9))(zod@3.25.76)':
+  '@opencard/sdk@0.0.4(@ai-sdk/openai@2.0.71(zod@3.25.76))(react-dom@19.0.0-rc-45804af1-20241021(react@19.0.0-rc-45804af1-20241021))(react@19.0.0-rc-45804af1-20241021)(ws@8.18.1(bufferutil@4.0.9))(zod@3.25.76)':
     dependencies:
       openai: 4.104.0(ws@8.18.1(bufferutil@4.0.9))(zod@3.25.76)
       react: 19.0.0-rc-45804af1-20241021
