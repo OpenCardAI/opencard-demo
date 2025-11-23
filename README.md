@@ -24,7 +24,7 @@
 - [AI SDK](https://ai-sdk.dev/docs/introduction)
   - Unified API for generating text, structured objects, and tool calls with LLMs
   - Hooks for building dynamic chat and generative user interfaces
-  - Supports xAI (default), OpenAI, Fireworks, and other model providers
+  - Powered by [OpenCard](https://opencard.ai) for access to OpenAI, Anthropic, Google, xAI, and other providers
 - [shadcn/ui](https://ui.shadcn.com)
   - Styling with [Tailwind CSS](https://tailwindcss.com)
   - Component primitives from [Radix UI](https://radix-ui.com) for accessibility and flexibility
@@ -36,15 +36,19 @@
 
 ## Model Providers
 
-This template uses the [Vercel AI Gateway](https://vercel.com/docs/ai-gateway) to access multiple AI models through a unified interface. The default configuration includes [xAI](https://x.ai) models (`grok-2-vision-1212`, `grok-3-mini`) routed through the gateway.
+This template uses [OpenCard](https://opencard.ai) to access multiple AI models through a unified API with credit-based billing. The default configuration uses OpenCard's production API (`https://api.opencard.ai`).
 
-### AI Gateway Authentication
+### OpenCard Authentication
 
-**For Vercel deployments**: Authentication is handled automatically via OIDC tokens.
+**For production**: Set environment variables to point to OpenCard's hosted API:
+- `OPENCARD_API_BASE=https://api.opencard.ai/v1`
+- `NEXT_PUBLIC_OPENCARD_API_BASE=https://api.opencard.ai`
 
-**For non-Vercel deployments**: You need to provide an AI Gateway API key by setting the `AI_GATEWAY_API_KEY` environment variable in your `.env.local` file.
+**For local development**: Point to your local OpenCard API:
+- `OPENCARD_API_BASE=http://localhost:3000/v1`
+- `NEXT_PUBLIC_OPENCARD_API_BASE=http://localhost:3000`
 
-With the [AI SDK](https://ai-sdk.dev/docs/introduction), you can also switch to direct LLM providers like [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://ai-sdk.dev/providers/ai-sdk-providers) with just a few lines of code.
+With the [AI SDK](https://ai-sdk.dev/docs/introduction), you can also switch to direct LLM providers like [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://ai-sdk.dev/providers/ai-sdk-providers) with just a few lines of code in `lib/ai/providers.ts`.
 
 ## Deploy Your Own
 
